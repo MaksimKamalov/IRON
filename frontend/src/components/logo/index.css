@@ -1,0 +1,15 @@
+#logo {
+    font-family: "Joti One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    color: white;
+    text-shadow:3px 0 0 black,0  0 1px black, 0  1px 0 black,0 -1px 0 black;
+    white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+    #logo {
+        font-size: 3.5rem;
+    }
+}

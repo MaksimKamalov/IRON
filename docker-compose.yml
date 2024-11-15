@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  django:
+    build: ./backend
+    container_name: django
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app/backend
+    ports:
+      - 8000:8000
+    depends_on:
+      - pgdb
+      
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  pgdb:
+    image: postgres
+    environment:
+      - POSTGRES_DB=iron
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=egr12620
+    container_name: pgdb
+    volumes:
+      - pgdbdata:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
+  migrate:
+    build: ./backend
+    depends_on:
+      - pgdb
+    command:
+      - sh
+      - -c
+      - |
+        python manage.py makemigrations
+        python manage.py migrate
+volumes:
+  pgdbdata: null

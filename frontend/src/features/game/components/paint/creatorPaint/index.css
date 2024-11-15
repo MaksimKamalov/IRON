@@ -1,0 +1,47 @@
+#canvas_creator {
+    cursor: crosshair;
+}
+
+.draw_menu {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+}
+
+.brush-change {
+    border: 3px solid black;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+}
+
+.color_container {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color_button {
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .brush-change {
+        font-size: 1.2rem;
+    }
+
+    .color_button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .color_container {
+        padding: 5px 5px;
+    }
+
+}

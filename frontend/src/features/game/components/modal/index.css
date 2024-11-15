@@ -1,0 +1,17 @@
+
+  #modal-title {
+    padding: 16px 16px 4px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .modal-content {
+    padding: 16px;
+    text-align: center;
+  }
+
+  #win-h{
+    color:var(--main-pink);
+  }
+  

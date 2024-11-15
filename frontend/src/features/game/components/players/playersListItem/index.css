@@ -1,0 +1,52 @@
+.playerContainer{
+    display:flex;   
+    width: 90%; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid var(--main-pink);
+    margin-bottom: 15px;
+    padding: 10px;
+    position: relative;
+}
+
+.playerAvatar {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    max-Width: 40px;
+    max-Height: 40px;
+    align-items: center;
+
+}
+
+.playerDelete {
+    position: absolute;
+    background-color: var(--main-pink);
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 4px 8px;
+    font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+    .playerContainer {
+        width: 130px;
+        min-width: 130px;
+        height: 120px;
+        margin-bottom: 0;
+        margin-right: 15px;
+
+        font-size: 13px;
+    }
+
+    .playerDelete {
+        font-size: 15px;
+        padding: 2px 5px;
+    }
+}

@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  django1:
+    build: ./backend
+    container_name: django1
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app/backend
+    ports:
+      - 8000:8000    
+
+  frontend1:
+    build:
+      context: ./frontend  
+    ports:
+      - "3000:3000"  
+        
+  redis1:
+    image: redis:latest
+    ports:
+      - "6379:6379"    
+
+volumes:
+  pgdbdata: null

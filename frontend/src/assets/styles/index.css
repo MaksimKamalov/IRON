@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    border: 0;
+    font-family: "Joti One", serif;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+:root {
+    --main-pink: #ff00b8;
+    --main-green: #00FFB2;
+    --main-blue: #1E90FF;
+}
+
+.paint {
+    width: 100%;
+    background: white;
+
+}
+
+
